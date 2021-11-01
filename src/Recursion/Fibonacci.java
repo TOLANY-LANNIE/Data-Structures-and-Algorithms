@@ -2,7 +2,7 @@ package Recursion;
 
 /**
  * Write a description of class Fibonacci here.
- *
+ *time complexity(2^n) ->
  * @author (your name)
  * @version (a version number or a date)
  */
