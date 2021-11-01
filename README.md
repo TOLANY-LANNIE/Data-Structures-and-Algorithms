@@ -1,1 +1,1 @@
-# Data Structures and Algorithms in Java :java:
+# Data Structures and Algorithms in Java :cold:
