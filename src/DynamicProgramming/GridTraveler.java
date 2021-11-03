@@ -15,7 +15,7 @@ public class GridTraveler {
         System.out.println("number of way is "+gridTraveler(1,1,map));
         System.out.println("number of way is "+gridTraveler(2,3,map));
         System.out.println("number of way is "+gridTraveler(3,2,map));
-        System.out.println("number of way is "+gridTraveler(18,18,map));
+        System.out.println("number of way is "+gridTraveler(17,17,map));
         //System.out.println("number of way is "+gridTraveler(18,18));
     }
     //using recursion (time complexity of 2^row+cols)

@@ -7,10 +7,11 @@ package DynamicProgramming;
  */
 public class MaxSubArray {
     public static void main(String [] args){
-        int [] array = {-2,11,-4,13,-5,2};
+        int [] array = {3, 7, 4, 6, 5};
         System.out.println(maxSubArray(array));
     }
 
+    //Note this is for contiguous some for  ints next to each other
     public static int maxSubArray(int[] nums) {
         int maxSum = nums[0];
         int currentSum = maxSum;
