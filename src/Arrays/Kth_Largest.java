@@ -13,8 +13,10 @@ public class Kth_Largest {
    static void findLargest(int []array, int x, int k ){
         Arrays.sort(array);
         int len = k+x;
-        for(int i =x ;i<=len;i++){
-            System.out.println(array[array.length-i]);
+        if(len<=array.length){
+            for(int i =x ;i<=len;i++){
+                System.out.println(array[array.length-i]);
+            }
         }
     }
 }
