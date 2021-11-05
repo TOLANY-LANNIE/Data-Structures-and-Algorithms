@@ -1,3 +1,5 @@
+package Strings;
+
 import java.io.*;
 
 public class RepeatedString {

@@ -1,6 +1,7 @@
+package Arrays;
 
 /**
- * Write a description of class MinElement here.
+ * Write a description of class Arrays.MinElement here.
  *
  * @author (your name)
  * @version (a version number or a date)

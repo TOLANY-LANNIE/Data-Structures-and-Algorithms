@@ -1,6 +1,7 @@
+package Arrays;
 
 /**
- * Write a description of class Majority_Element here.
+ * Write a description of class Arrays.Majority_Element here.
  *
  * @author (your name)
  * @version (a version number or a date)
