@@ -62,6 +62,8 @@ public class Linkedlist {
         }
     }
 
+
+
     //check if val is in the linkedlist
     private static boolean contains(Linkedlist list, int target){
         Node currNode = list.head;
@@ -93,6 +95,10 @@ public class Linkedlist {
         list = insert(list, 6);
         list = insert(list, 7);
         list = insert(list, 8);
+        printList(list);
+
+
+
 
         // Print the LinkedList
        // printList(list);

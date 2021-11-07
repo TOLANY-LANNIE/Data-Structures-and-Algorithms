@@ -103,24 +103,10 @@ public class RecursiveLinkedList {
         head.next = deleteRecursively(head.next, target);
         return head;
     }
-    static Node deleteNodeNth(Node start, int k)
+    static Node deleteNode(Node start, int position )
     {
-        // If invalid k
-        if (k < 1)
-            return start;
-
-        // If linked list is empty
-        if (start == null)
-            return null;
-
-        // Base case (start needs to be deleted)
-        if (k == 1)
-        {
-            Node res = start.next;
-            return res;
-        }
-
-        start.next = deleteNodeNth(start.next, k-1);
+        if (position == 0){ return start.next; }
+        start.next = deleteNode(start.next, position-1);
         return start;
     }
 
@@ -156,6 +142,21 @@ public class RecursiveLinkedList {
         // send back new head node in every recursion
         return newHeadNode;
     }
+    public static Node insertNodeAtPosition(Node llist, int data, int position){
+        Node node = new Node(data);
+        if(position==0){
+            node.next = llist.next;
+            llist=node;
+        }else{
+            Node aux = new Node(0);
+            aux.next = llist;
+            for(int i=0;i<position;i++)aux=aux.next;
+            node.next = aux.next;
+            aux.next=node;
+        }
+
+        return llist;
+    }
     // Driver code
     public static void main(String args[])
     {
@@ -166,7 +167,6 @@ public class RecursiveLinkedList {
         head = insertEnd(head, 12);
         head = insertEnd(head, 14);
         head = insertEnd(head, 10);
-        head = insertEnd(head, 13244);
         traverse(head);
 
         //System.out.println("\n Contains "+contains(head,12));
@@ -174,7 +174,7 @@ public class RecursiveLinkedList {
         //deleteRecursively(head, 15);
         System.out.println("\n=========================");
         //deleteNodeNth(head,3);
-        Node newHead =reserveLinkedListRecursive(head);
+        Node newHead =insertNodeAtPosition(head,34,4);
         traverse(newHead);
 
 
