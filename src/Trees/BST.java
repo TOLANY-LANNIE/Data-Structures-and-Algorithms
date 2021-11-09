@@ -1,9 +1,6 @@
 package Trees;
 
-
-import LinkedLists.RecursiveLinkedList;
-
-public class Tree {
+public class BST {
     //Node class
     private static class Node{
         private int data;
@@ -16,7 +13,6 @@ public class Tree {
             this.right = null;
         }
     }
-
     static Node insert(Node root, int val){
         Node newNode =  new Node(val);
         if(root == null){
@@ -70,6 +66,60 @@ public class Tree {
         if (root.right!=null) printInorder(root.right);
         System.out.println(root.data);
     }
+    static void printLevelOrder(Node root){
+    }
+
+    static int findMin(Node root){
+        /*if(root==null){
+            System.out.println("tree empty");
+            return -1;
+        }
+        Node curr = root;
+        while (curr.left!=null){
+            curr = curr.left;
+        }
+        return curr.data;*/
+        //recursively
+        if(root==null){
+            System.out.println("tree empty");
+            return -1;
+        } else if(root.left==null){
+            return root.data;
+        }
+        return findMax(root.left);
+    }
+    static int findMax(Node root){
+        /*if(root==null){
+            System.out.println("tree empty");
+            return -1;
+        }
+        Node curr = root;
+        while (curr.right!=null){
+            curr = curr.right;
+        }
+        return curr.data;*/
+        //recursively
+        if(root==null){
+            System.out.println("tree empty");
+            return -1;
+        } else if(root.right==null){
+            return root.data;
+        }
+        return findMax(root.right);
+    }
+    static int height(Node root){
+
+        return 0;
+    }
+    static  Node breachFirstSearch(Node root){
+        return null;
+    }
+    static  Node depthFirstSearch(Node root){
+        return null;
+    }
+    static boolean isBinaryTree(Node roo){
+        return false;
+    }
 
     public static void main(String[] args) {
         Node root =null;
@@ -78,16 +128,13 @@ public class Tree {
         root =insert(root, 15);
         root =insert(root, 18);
         root =insert(root, 8);
-        printPreOrder(root);
-        System.out.println("----------------------------");
-        printInorder(root);
-        System.out.println("----------------------------");
-        printPostOrder(root);
+        //printPreOrder(root);
+        //System.out.println("----------------------------");
+        //printInorder(root);
+        //System.out.println("----------------------------");
+        //printPostOrder(root);
         int find = 34;
-        System.out.println("Contains "+find+": "+contains(root,find));
-
-
-
-
+        //System.out.println("Contains "+find+": "+contains(root,find));
+        System.out.println(findMin(root));
     }
 }

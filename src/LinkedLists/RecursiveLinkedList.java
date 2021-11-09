@@ -142,6 +142,14 @@ public class RecursiveLinkedList {
         // send back new head node in every recursion
         return newHeadNode;
     }
+    public static void reversePrint(Node llist) {
+        // Write your code here
+        if(llist== null) return;
+        else{
+            reversePrint(llist.next);
+            System.out.println(llist.data);
+        }
+    }
     public static Node insertNodeAtPosition(Node llist, int data, int position){
         Node node = new Node(data);
         if(position==0){
@@ -174,8 +182,9 @@ public class RecursiveLinkedList {
         //deleteRecursively(head, 15);
         System.out.println("\n=========================");
         //deleteNodeNth(head,3);
-        Node newHead =insertNodeAtPosition(head,34,4);
-        traverse(newHead);
+        reversePrint(head);
+        //traverse(head);
+
 
 
     }
